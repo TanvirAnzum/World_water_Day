@@ -1,0 +1,73 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+// variables
+
+// font sizes
+
+$sm: 1.125em;
+$reg: 1.25em;
+$lg: 1.5em;
+$xl: 3.5em;
+
+//font weights
+
+$regular: 500;
+$semi-bold: 600;
+$bold: 700;
+
+//colors
+
+$ash: #454545;
+
+//variables ends
+
+//mixins
+
+@mixin f-style($fs, $fw, $clr) {
+  font-size: $fs;
+  font-weight: $fw;
+  color: $clr;
+}
+
+// header area starts
+
+.header-area {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+  justify-content: start;
+
+  &__list {
+    list-style-type: none;
+  }
+
+  &__item {
+    display: inline-block;
+    padding-inline: 1em;
+
+    a {
+      text-decoration: none;
+      @include f-style($reg, $regular, $ash);
+    }
+  }
+}
+
+// header area ends
+
+// main area starts
+.content-area {
+  width: 100%;
+  height: 60vh;
+}
